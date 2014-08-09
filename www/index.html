@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Worship Pads</title>
+        
+        <style>
+			
+			html {
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: #085A6F;
+				color: #AADAAA;
+				padding: 0;
+				margin: 0;
+				font-family: 'Open Sans Condensed', sans-serif;
+			}
+			button {
+				background: #AADAAA;
+				border: 0;
+				width: 49%;
+				margin: 0.5%;
+				min-height: 80px;
+				color: white;
+				font-size: 50px; 
+				float: left;
+				font-family: 'Open Sans Condensed', sans-serif;
+				position: relative;
+				outline: none;
+				overflow: hidden;
+			}
+			
+			button span {
+				content: " ";
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: rgba(255,255,255,0);
+				left: 0;
+				top: 0;
+			}
+			
+			button:active {
+				outline: none;
+			}
+			
+			.playing {
+				/*background: #F4D293;*/
+			}
+			
+			.console {
+				display: none;
+			}
+			
+			h1 {
+				font-weight: normal;
+				color: white;
+				text-align: center;
+				
+				font-size: 50px;
+				margin: 20px;
+
+			}
+			 
+				
+			</style>
+    </head>
+    <body>
+    	
+    		<div>
+			<h1>Worship Pads</h1>
+			<button href="#c">
+				<span>C</span>
+			</button>
+			<button href=#cis>
+				<span>C#</span>
+			</button>
+			<button href="#d">
+				<span>D</span>
+			</button>
+			<button href="#dis">
+				<span>D#</span>
+			</button>
+			<button href="#e">
+				<span>E</span>
+			</button>
+			<button  href="#f">
+				<span>F</span>
+			</button>
+			<button href="#fis">
+				<span>F#</span>
+			</button>
+			<button href="#g">
+				<span>G</span>
+			</button>
+			<button href="#gis">
+				<span>G#</span>
+			</button>
+			<button href="#a">
+				<span>A</span>
+			</button>
+			<button href="#bb">
+				<span>Bb</span>
+			</button>
+			<button href="#b">
+				<span>B</span>
+			</button>
+			<br />
+			
+			<audio id="c" preload loop>
+				 <source src="pads/c.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="cis" preload loop>
+				 <source src="pads/db.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="d" preload loop>
+				 <source src="pads/d.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="dis" preload loop>
+				 <source src="pads/eb.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="e" preload loop>
+				 <source src="pads/e.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="f" preload loop>
+				 <source src="pads/f.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="fis" preload loop>
+				 <source src="pads/gb.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="g" preload loop>
+				 <source src="pads/g.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="gis" preload loop>
+				 <source src="pads/ab.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="a" preload loop>
+				 <source src="pads/a.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="bb" preload loop>
+				 <source src="pads/bb.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="b" preload loop>
+				 <source src="pads/b.mp3" type="audio/mpeg">
+			</audio>
+			
+			
+			<div class="console">
+				
+			</div>
+		</div>
+    	
+    	<!--
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>-->
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
